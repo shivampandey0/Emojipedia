@@ -13,7 +13,11 @@ const emojiDictionary = {
   "🥳": "Party",
   "👌": "Good",
   "😭": "Crying",
-  "😗": "Whistling"
+  "😗": "Kissing Face",
+  "😉": "Winking Face",
+  "🤩": "Star-Struck",
+  "🤗": "Hugging Face",
+  "🤫": "Shushing Face"
 };
 
 export default function App() {
@@ -49,7 +53,7 @@ export default function App() {
       <div style={{ padding: "1rem" }}>{userInput}</div>
 
       <h3>emojis we know</h3>
-      <div>
+      <div className="emoji-box">
         {emojiList.map((emoji) => {
           return (
             <span

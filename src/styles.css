@@ -8,3 +8,11 @@ input {
   border-radius: 0.5rem;
   width: 80%;
 }
+
+.emoji-box {
+  border: 2px solid yellowgreen;
+  padding: 1rem 4rem;
+  width: 50%;
+  margin: auto;
+  border-radius: 2rem;
+}
