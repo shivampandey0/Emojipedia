@@ -2,8 +2,7 @@ import React, { useState } from "react";
 
 import "./styles.css";
 
-var color = "green";
-var appName = "Emojipedia";
+var appName = "🤫 Emojipedia 🤫";
 
 const emojiDictionary = {
   "😂": "Laughing",
@@ -31,6 +30,8 @@ export default function App() {
 
     if (meaning === undefined) {
       meaning = "We don't have it in our DB";
+    } else {
+      meaning = userInput + ` ${meaning}`;
     }
 
     if (userInput === "") {
@@ -41,18 +42,19 @@ export default function App() {
   }
 
   function emojiClickHandler(emoji) {
-    let meaning = emojiDictionary[emoji];
+    let meaning = emoji + ` ${emojiDictionary[emoji]}`;
+
     setUserInput(meaning);
   }
 
   return (
     <div className="App">
-      <h1 style={{ color: color }}>{appName}</h1>
-      <input onChange={inputChangeHandler}></input>
+      <h1>{appName}</h1>
+      <input placeholder="Enter emoji..." onChange={inputChangeHandler}></input>
 
       <div style={{ padding: "1rem" }}>{userInput}</div>
 
-      <h3>emojis we know</h3>
+      <h3>We only have these emoji's in our DB</h3>
       <div className="emoji-box">
         {emojiList.map((emoji) => {
           return (
